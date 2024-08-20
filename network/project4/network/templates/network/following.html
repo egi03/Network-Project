@@ -1,0 +1,39 @@
+{% extends "network/layout.html" %}
+
+{% load static %}
+<head><meta name="csrf-token" content="{% csrf_token %}"></head>
+
+{% block body %}
+
+<h1 style="margin: 10px;">Following</h1>
+
+<div id="posts"></div>
+
+    <input type="hidden" name="csrfmiddlewaretoken" value="your-csrf-token-here">
+    <div class="pagination">
+        {% if page_obj.has_previous %}
+            <a class="button-style" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+        {% else %}
+            <span class="disabled-button-style">Previous</span>
+        {% endif %}
+        
+        {% if page_obj.has_next %}
+            <a class="button-style" href="?page={{ page_obj.next_page_number }}">Next</a>
+        {% else %}
+            <span class="disabled-button-style">Next</span>
+        {% endif %}
+    </div>
+
+    <script>
+        window.users = {{ users_json|safe}};
+        window.posts = {{ posts_json|safe }};
+        window.likes = {{ likes_json|safe }};
+    </script>
+
+    <script type="text/javascript">
+        window.current_user = "{{ request.user.username|escapejs }}";
+    </script>
+
+    <script src="{% static 'network/index.js' %}"></script>
+
+{% endblock %}

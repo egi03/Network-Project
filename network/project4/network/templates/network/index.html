@@ -1,0 +1,65 @@
+{% extends "network/layout.html" %}
+
+{% load static %}
+
+{% block body %}
+
+    <h1 style="margin: 10px;">All posts</h1>
+
+    {% if user.is_authenticated %}
+
+    <form action="{% url 'create_post' %}" method="post" class="post-form" id="new-post-from">
+        {% csrf_token %}
+        <h3 id="new-Post">New post</h3>
+        <div class="form-group" id="new-post-text">
+            <textarea class="form-control" type="text" name="text" id="new-post-textarea" placeholder="Text"></textarea>
+        </div>
+        <div style="text-align: center">
+            <input class="btn btn-primary" type="submit" value="Post">
+        </div>
+    </form>
+    {% endif %}
+
+    <div id="posts"></div>
+
+    <div class="pagination">
+        {% if page_obj.has_previous %}
+            <a class="button-style" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+        {% else %}
+            <span class="disabled-button-style">Previous</span>
+        {% endif %}
+        
+        {% if page_obj.has_next %}
+            <a class="button-style" href="?page={{ page_obj.next_page_number }}">Next</a>
+        {% else %}
+            <span class="disabled-button-style">Next</span>
+        {% endif %}
+    </div>
+
+    {% if user.is_authenticated %}
+
+        <script>
+            window.users = {{ users_json|safe}};
+            window.posts = {{ posts_json|safe }};
+            window.likes = {{ likes_json|safe }};
+        </script>
+
+        <script type="text/javascript">
+            window.current_user = "{{ request.user.username|escapejs }}";
+        </script>
+
+        <script src="{% static 'network/index.js' %}"></script>
+
+    {% else %}
+
+        <script>
+            window.users = {{ users_json|safe}};
+            window.posts = {{ posts_json|safe }};
+            window.likes = {{ likes_json|safe }};
+        </script>
+
+        <script src="{% static 'network/load_posts.js' %}"></script>
+        
+    {% endif %}
+
+{% endblock %}

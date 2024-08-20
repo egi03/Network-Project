@@ -1,0 +1,226 @@
+/* General styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: hsla(240, 29%, 97%, 0.616);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+#new-post-from {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 50%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#new-Post {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+#new-post-text {
+    margin-bottom: 15px;
+}
+
+#new-post-textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    resize: none;
+    min-height: 150px;
+    outline: none;
+}
+
+.form-control{
+    width: 40%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    outline: none;
+    margin-bottom: 15px;
+    margin: auto;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.reg-button{
+    text-align: center;
+}
+
+.btn-primary {
+    width: 40%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: auto;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.single-post {
+    background-color: rgba(207, 207, 207, 0.705);
+    padding: 20px;
+    border-radius: 10px;
+    border-color: #0056b3;
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 50%;
+    width: 100%;
+    margin: 20px auto;
+    font-family: 'Arial', sans-serif;
+}
+
+#author-username {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+#text-content{
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+#post-date{
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #999;
+}
+
+#likes{
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #000000;
+}
+
+#profile-username {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.profile-container {
+    max-width: 900px;
+    margin: 20px auto;
+    background: hsla(211, 100%, 50%, 0.432);
+    border-radius: 8px;
+    border-color: #007bff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.button-style {
+    background-color: #007bff; 
+    color: white; 
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px; 
+    border-radius: 8px; 
+    border: none; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+    margin: auto;
+    margin-bottom: 20px;;
+}
+
+.button-style:hover {
+    background-color: #0056b3; 
+}
+
+.disabled-button-style {
+    background-color: #999999; 
+    color: white; 
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px; 
+    border-radius: 8px; 
+    border: none; 
+    cursor:not-allowed;
+    transition: background-color 0.3s ease;
+    margin: auto;
+    margin-bottom: 20px;;
+}
+
+.edit-button{
+    background-color: #007bff; 
+    color: white; 
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px; 
+    border-radius: 8px; 
+    border: none; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+    margin-left: auto;
+    margin-right: 0px;
+    margin-bottom: 20px;;
+
+}
+
+.edit-button:hover {
+    background-color: #0056b3; 
+}
+
+.edit-textarea{
+
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    resize: none;
+    min-height: 150px;
+    outline: none;
+
+}
+
+.like-button {
+    background-color: hsla(276, 100%, 50%, 0.623); 
+    color: white; 
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px; 
+    border-radius: 8px; 
+    border: none; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+    margin-left: auto;
+    margin-right: 35%;
+    margin-bottom: 10px;
+}
